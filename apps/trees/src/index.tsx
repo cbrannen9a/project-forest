@@ -1,15 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { postmaster, reportWebVitals } from "./helpers";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
+import { Home } from "./pages/Home";
+import { routes } from "./routes";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {routes.map(({ element, path }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
@@ -21,29 +30,3 @@ reportWebVitals(async ({ id, name, value }) => {
   console.log({ path, name, value });
   await postmaster({ id, path, name, value });
 });
-
-async function postmaster(postData: {
-  id: string;
-  path: string;
-  name: string;
-  value: number;
-}) {
-  try {
-    const response = await fetch("http://localhost:8000", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(postData),
-    });
-
-    if (response.ok) {
-      const responseData = await response.text();
-      console.log(responseData);
-    } else {
-      console.error("Error:", response.statusText);
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
