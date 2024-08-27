@@ -7,9 +7,9 @@ async function navigateToUrls(urls: string[]) {
   for (const url of urls) {
     const page = await browser.newPage();
     await page.goto(url);
-    // Wait for 5 seconds
+    // Wait
     await new Promise((resolve) => {
-      setTimeout(resolve, 5000);
+      setTimeout(resolve, 2000);
     });
     await page.close();
   }
