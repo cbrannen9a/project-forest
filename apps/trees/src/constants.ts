@@ -3,4 +3,4 @@ export const numberOfExamples: number[] = Array.from(
   (_, i) => i + 1
 );
 
-export const excludedReportPaths = ["/", "dashboard"];
+export const excludedReportPaths = ["/", "/dashboard"];

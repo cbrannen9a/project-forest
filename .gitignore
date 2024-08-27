@@ -23,22 +23,6 @@ yarn-error.log*
 
 
 apps/lumber-jack/data/log.txt
-apps/trees/build/asset-manifest.json
-apps/trees/build/favicon.ico
-apps/trees/build/index.html
-apps/trees/build/logo192.png
-apps/trees/build/logo512.png
-apps/trees/build/manifest.json
-apps/trees/build/robots.txt
-apps/trees/build/static/css/main.f1ba5634.css
-apps/trees/build/static/css/main.f1ba5634.css.map
-apps/trees/build/static/js/400.d546aab8.chunk.js
-apps/trees/build/static/js/400.d546aab8.chunk.js.map
-apps/trees/build/static/js/main.fd585b05.js
-apps/trees/build/static/js/main.fd585b05.js.LICENSE.txt
-apps/trees/build/static/js/main.fd585b05.js.map
-apps/trees/build/static/css/main.a1d9428f.css
-apps/trees/build/static/css/main.a1d9428f.css.map
-apps/trees/build/static/js/main.0273c92f.js
-apps/trees/build/static/js/main.0273c92f.js.LICENSE.txt
-apps/trees/build/static/js/main.0273c92f.js.map
+apps/trees/build/*
+
+
