@@ -1,6 +1,5 @@
 import puppeteer from "puppeteer";
-
-const iterations = 20;
+import { iterations, urls } from "./constants";
 
 async function navigateToUrls(urls: string[]) {
   const browser = await puppeteer.launch();
@@ -17,11 +16,6 @@ async function navigateToUrls(urls: string[]) {
 
   await browser.close();
 }
-
-const urls = [
-  "http://localhost:3000/example-1",
-  "http://localhost:3000/example-2",
-];
 
 async function main() {
   for (let i = 0; i < iterations; i++) {
