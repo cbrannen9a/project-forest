@@ -1,6 +1,6 @@
-import { numberOfExamples } from "../constants";
+import { numberOfExamples } from "../../constants";
 
-export function Example1() {
+export function Example1A() {
   function Profile() {
     return (
       <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />

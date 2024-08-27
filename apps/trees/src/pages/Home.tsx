@@ -6,6 +6,9 @@ export function Home() {
     <div>
       Home
       <ul>
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
         {routes.map(({ path, name }) => (
           <li key={path}>
             <Link to={path}>{name}</Link>

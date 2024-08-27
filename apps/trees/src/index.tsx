@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { excludedReportPaths } from "./constants";
 import { postmaster, reportWebVitals } from "./helpers";
 import "./index.css";
+import { DashboardPage } from "./pages/Dashboard";
 import { Home } from "./pages/Home";
 import { routes } from "./routes";
 
@@ -14,6 +16,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         {routes.map(({ element, path }) => (
           <Route key={path} path={path} element={element} />
         ))}
@@ -28,5 +31,7 @@ root.render(
 reportWebVitals(async ({ id, name, value }) => {
   const path = window.location.pathname;
   console.log({ path, name, value });
-  await postmaster({ id, path, name, value });
+  if (!excludedReportPaths.includes(path)) {
+    await postmaster({ id, path, name, value });
+  }
 });

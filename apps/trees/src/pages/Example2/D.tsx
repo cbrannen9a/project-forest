@@ -1,9 +1,11 @@
-import { numberOfExamples } from "../constants";
+import { useCallback } from "react";
+import { numberOfExamples } from "../../constants";
 
-export function Example4() {
-  const onClick = (value: number) => {
+export function Example2D() {
+  const onClick = useCallback((value: number) => {
     console.log(`Item ${value} clicked`);
-  };
+  }, []);
+
   return (
     <>
       {numberOfExamples.map((example) => (

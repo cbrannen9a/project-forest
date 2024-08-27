@@ -1,6 +1,6 @@
-import { numberOfExamples } from "../constants";
+import { numberOfExamples } from "../../constants";
 
-export function Example2() {
+export function Example1B() {
   return (
     <>
       {numberOfExamples.map((example) => (

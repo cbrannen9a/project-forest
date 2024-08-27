@@ -1,6 +1,6 @@
-import { numberOfExamples } from "../constants";
+import { numberOfExamples } from "../../constants";
 
-export function Example3() {
+export function Example2A() {
   function Button({
     onClick,
     value,

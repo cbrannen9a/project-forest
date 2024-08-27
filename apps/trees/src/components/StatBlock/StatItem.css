@@ -1,0 +1,36 @@
+.statItemTable {
+    border-collapse: collapse;
+}
+
+.statItemTable th,
+.statItemTable td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.statItemTable .name {
+    font-weight: bold;
+}
+
+.statItemTable .value {
+    text-align: right;
+}
+.statItem .percentile75.green {
+    color: green;
+}
+
+.statItem .percentile75.red {
+    color: red;
+}
+
+.statItem .percentile75.amber {
+    color: orange;
+}
+
+.statItem .standardDeviation {
+    color: green;
+}
+
+.statItem .standardDeviation.red {
+    color: red;
+}
