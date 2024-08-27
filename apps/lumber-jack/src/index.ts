@@ -1,6 +1,8 @@
 import cors from "cors";
 import express from "express";
 import fs from "fs";
+import { parseLogs } from "./parseLogs";
+import { calculateStats } from "./statistics";
 
 const app = express();
 const port = 8000;
@@ -15,7 +17,9 @@ app.get("/", (req, res) => {
       console.error("Error reading log:", err);
       res.status(500).send("Error reading log");
     } else {
-      res.send(`I'm a lumberjack and I'm okay!\n ${data}`);
+      const stats = JSON.stringify(calculateStats(parseLogs(data)));
+
+      res.send(stats);
     }
   });
 });
