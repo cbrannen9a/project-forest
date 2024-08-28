@@ -10,27 +10,23 @@
 
 .statItemTable .name {
     font-weight: bold;
+    text-align: left;
 }
 
-.statItemTable .value {
+.statItemTable {
     text-align: right;
 }
-.statItem .percentile75.green {
-    color: green;
+
+ .percentile75.green {
+    background-color: green;
+    color: white
 }
 
-.statItem .percentile75.red {
-    color: red;
+.percentile75.red {
+    background-color: red;
+    color: white
 }
 
-.statItem .percentile75.amber {
-    color: orange;
-}
-
-.statItem .standardDeviation {
-    color: green;
-}
-
-.statItem .standardDeviation.red {
-    color: red;
+.percentile75.amber {
+    background-color: orange;
 }

@@ -1,5 +1,7 @@
 export interface Stat {
   path: string;
+  example: string;
+  variant: string;
   results: StatItem[];
 }
 

@@ -1,9 +1,4 @@
-export async function postmaster(postData: {
-  id: string;
-  path: string;
-  name: string;
-  value: number;
-}) {
+export async function postmaster(postData: Record<string, unknown>) {
   try {
     const response = await fetch("http://localhost:8000", {
       method: "POST",

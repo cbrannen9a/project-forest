@@ -32,6 +32,14 @@ reportWebVitals(async ({ id, name, value }) => {
   const path = window.location.pathname;
   console.log({ path, name, value });
   if (!excludedReportPaths.includes(path)) {
-    await postmaster({ id, path, name, value });
+    const urlParts = path.split("/");
+    await postmaster({
+      id,
+      path,
+      name,
+      value,
+      example: urlParts?.[1],
+      variant: urlParts?.[2],
+    });
   }
 });

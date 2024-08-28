@@ -34,6 +34,9 @@ function getPercentileColour({
     case "CLS": {
       return getColour({ value: percentile75, maxGood: 0.1, minBad: 0.25 });
     }
+    case "TTFB": {
+      return getColour({ value: percentile75, maxGood: 800, minBad: 1800 });
+    }
     default:
       return "black";
   }
@@ -45,19 +48,14 @@ export function StatItem({ result }: { result: StatItemType }) {
   const percentileColor = getPercentileColour({ name, percentile75 });
 
   return (
-    <tr className="statItem">
+    <tr className="statItemTable">
       <td className="name">{name}</td>
-
       <td className="count">{count}</td>
-      <td className="percentileLabel">
-        <span className={`percentile75 ${percentileColor}`}>
-          {Math.round(percentile75 * 100) / 100}
-        </span>
+      <td className={`percentile75 ${percentileColor}`}>
+        {Math.round(percentile75 * 100) / 100}
       </td>
-      <td className="sdLabel">
-        <span className="standardDeviation">
-          {Math.round(standardDeviation * 100) / 100}
-        </span>
+      <td className="standardDeviation">
+        {Math.round(standardDeviation * 100) / 100}
       </td>
     </tr>
   );

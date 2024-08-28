@@ -1,0 +1,10 @@
+.statBlockTable {
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+.statBlockTable th,
+.statBlockTable td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}

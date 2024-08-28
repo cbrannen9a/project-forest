@@ -23,8 +23,11 @@ export function calculateStats<
 
   // Calculate 75th percentile and standard deviation for each group
   const results = Object.entries(groupedData).map(([path, nameGroups]) => {
+    const urlParts = path.split("/");
     return {
       path,
+      example: urlParts?.[1],
+      variant: urlParts?.[2],
       results: Object.entries(nameGroups).map(([name, { values, count }]) => {
         return {
           name,
