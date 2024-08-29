@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "start": "PORT=8000 ts-node src/index.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",

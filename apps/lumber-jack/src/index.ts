@@ -5,7 +5,7 @@ import { parseLogs } from "./parseLogs";
 import { calculateStats } from "./statistics";
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 const logFile = "./data/log.txt";
 
 app.use(cors());
