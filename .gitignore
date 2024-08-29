@@ -22,7 +22,7 @@ yarn-debug.log*
 yarn-error.log*
 
 
-apps/lumber-jack/data/log.txt
+apps/lumber-jack/data/*
 apps/trees/build/*
 
 
