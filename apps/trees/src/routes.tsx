@@ -1,3 +1,4 @@
+import { ControlA } from "./pages/Control/A";
 import { Example1A } from "./pages/Example1/A";
 import { Example1B } from "./pages/Example1/B";
 import { Example2A } from "./pages/Example2/A";
@@ -6,6 +7,11 @@ import { Example2C } from "./pages/Example2/C";
 import { Example2D } from "./pages/Example2/D";
 
 export const routes = [
+  {
+    name: "Control A",
+    path: "/control/a",
+    element: <ControlA />,
+  },
   {
     name: "Example 1a",
     path: "/example-1/a",

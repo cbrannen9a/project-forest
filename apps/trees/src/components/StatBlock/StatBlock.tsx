@@ -18,9 +18,11 @@ export function StatBlock({ stat }: { stat: Stat }) {
           </tr>
         </thead>
         <tbody>
-          {results.map((result) => (
-            <StatItem key={result.name} result={result} />
-          ))}
+          {results
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((result) => (
+              <StatItem key={result.name} result={result} />
+            ))}
         </tbody>
       </table>
     </div>

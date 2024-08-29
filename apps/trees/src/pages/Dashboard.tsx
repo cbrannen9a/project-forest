@@ -26,7 +26,10 @@ function Dashboard() {
     error,
   } = useQuery<Stat[]>({
     queryKey: ["stats"],
-    queryFn: () => fetch("http://localhost:8000").then((res) => res.json()),
+    queryFn: () =>
+      fetch(
+        `${process.env.REACT_APP_BASE_URL}:${process.env.REACT_APP_LUMBER_JACK_PORT}`
+      ).then((res) => res.json()),
   });
 
   if (isLoading) {
